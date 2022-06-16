@@ -1,53 +1,40 @@
-// #include "HumanB.hpp"
-
-// HumanB::HumanB(std::string name)
-// {
-// 	this->name = name;
-// }
-
-// void HumanB::attack()
-// {
-// 	std::cout << name << " attacks with their " << myWeapon.getType() << std::endl;
-// }
-
-// void HumanB::setWeapon(Weapon &weapon)
-// {
-// 	this->myWeapon = weapon;
-// }
-
-// std::string HumanB::getName()
-// {
-// 	return (this->name);
-// }
-
-// void HumanB::setName(std::string name)
-// {
-// 	this->name = name;
-// }
-
 #include "HumanB.hpp"
-#include <iostream>
 
-HumanB::HumanB(std::string name) :
-	_name(name)
+// class HumanB
+// {
+// 	public:
+// 	HumanB(std::string name);
+// 	void setWeapon(Weapon &weapon);
+// 	void setName(std::string name);
+// 	std::string getName(void);
+// 	void attack();
+
+// 	private:
+// 	std::string name;
+// 	Weapon *myWeapon;
+// };
+
+HumanB::HumanB(std::string name)
 {
+	this->name = name;
 }
 
-HumanB::~HumanB(void)
+void HumanB::setWeapon(Weapon &weapon)
 {
+	this->myWeapon = &weapon;
 }
 
-void HumanB::setWeapon(Weapon& weapon)
+void HumanB::setName(std::string name)
 {
-	this->_weapon = &weapon;
+	this->name = name;
 }
 
-void HumanB::attack(void) const
+std::string HumanB::getName()
 {
-	std::cout << this->_name << " attacks with his ";
-	if (this->_weapon)
-		std::cout << this->_weapon->getType();
-	else
-		std::cout << "bare fists";
-	std::cout << std::endl;
+	return this->name;
+}
+
+void HumanB::attack()
+{
+	std::cout << name << " attacks with their " << myWeapon->getType() << std::endl;
 }

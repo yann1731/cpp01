@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/yannickst-laurent/CommonCore/cpp/cpp01/ex04'
+make: Leaving directory `/Users/yannickst-laurent/CommonCore/cpp/cpp01/ex04'
+ 
+make: *** No targets.  Stop.
+
